@@ -1,7 +1,6 @@
 import { News } from './interfaces/home.interface'
 
 import { Component } from '@angular/core'
-import {BlockVideoComponent} from './components/block-video/block-video.component';
 
 @Component({
   selector: 'app-home-hero',
