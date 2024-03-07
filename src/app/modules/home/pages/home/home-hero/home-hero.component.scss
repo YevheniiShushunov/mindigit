@@ -1,4 +1,218 @@
 @import 'bootstrap/scss/mixins';
 @import 'src/assets/scss/theme-angular-starter1/bootstrap/variables';
 
+.wrapper {
+  @include media-breakpoint-down(md) {}
+  min-width: 320px;
+}
 
+.first-block-wrapper {
+  width: 100%;
+  height: 850px;
+
+  @include media-breakpoint-down(md) {
+    height: 568px;
+  }
+}
+
+.first-block {
+  max-height: 850px;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(61.04% 103.41% at 0.94% 64.88%, #FFB885 0%, rgba(255, 205, 78, 0) 100%),
+  radial-gradient(49.72% 84.24% at 12.26% 88.76%, #FFCD4E 0%, #FFE9D4 100%);
+}
+
+.first-block-tittle {
+  align-self: center;
+  margin-top: 201px;
+  text-align: center;
+  max-width: 769px;
+  max-height: 134px;
+  font-family: eUkraine, 'sans-serif';
+
+  @include media-breakpoint-down(xxl) {
+      margin-left: 334px;
+      align-self: start;
+  }
+
+  @include media-breakpoint-down(xl) {
+    align-self: center;
+    margin-left: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    align-self: center;
+    margin-top: 143px;
+    margin-left: 0;
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: 56px;
+    line-height: 67.16px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 30px;
+      line-height: 36px;
+      font-weight: 400;
+      max-height: 109px;
+      max-width: 288px;
+    }
+  }
+
+  .first-block-tittle__button {
+    margin-top: 46px;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 37px !important;
+    }
+
+    .button__video {
+      height: 56px;
+      width: 241px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #FFFFFF;
+      padding: 16px 37px;
+      background: #000000;
+      border-radius: 48px;
+
+      @include media-breakpoint-down(md) {
+        max-width: 211px;
+        max-height: 48px;
+        padding: 12px 34px !important;
+        font-size: 13px !important;
+        font-weight: 400;
+
+      }
+
+      &:hover {
+        background: #545416;
+        transition: 0.5s;
+
+        @include media-breakpoint-down(xl) {
+          &:hover {
+            background: #000000 !important;
+            cursor: default;
+          }
+        }
+      }
+    }
+
+    .button__img {
+      height: 18px;
+      width: 18px;
+      margin-right: 10px;
+
+      @include media-breakpoint-down(md) {
+        width: 15px;
+        height: 15px;
+    }
+  }
+}
+
+.second-block-wrapper {
+  width: 100%;
+
+
+  .second-block__card {
+    min-height: 568px;
+
+    @include media-breakpoint-down(md) {
+      min-height: 569px !important;
+    }
+  }
+
+    h2 {
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 43.17px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-bottom: 51px;
+    }
+  }
+}
+
+.section-two-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 74px 32px;
+  margin-left: 160px;
+  padding-top: 100px;
+  font-family: eUkraine, "sans-serif";
+  padding-bottom: 133px;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    padding-top: 55px !important;
+    flex-wrap: nowrap !important;
+    margin-left: 16px !important;
+    max-height: none !important;
+    width: 288px;
+    padding-bottom: 34px;
+  }
+}
+.section-two-container:not(first-child) {
+  @include media-breakpoint-down(sm) {
+    gap: 18px 0 !important;
+  }
+}
+
+.news-container {
+  height: 100%;
+
+  .news-container-item {
+    width: 352px;
+
+    @include media-breakpoint-down(sm) {
+      width: 288px !important;
+    }
+
+    .news-item__number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 63px;
+      height: 37px;
+      background: rgba(244, 244, 244, 1);
+      border-radius: 32px;
+      padding: 10px 23px;
+
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+        line-height: 16.79px;
+      }
+    }
+
+    .news-item__title {
+      margin-top: 20px;
+
+      h2 {
+        @include media-breakpoint-down(md) {
+          font-size: 24px;
+          line-height: 28.78px;
+        }
+      }
+    }
+
+    .news-item__text {
+      font-size: 18px;
+      line-height: 21.59px;
+      white-space: pre-wrap;
+      font-weight: 400;
+      margin-top: 7px;
+
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: -0.02em;
+      }
+    }
+  }
+}

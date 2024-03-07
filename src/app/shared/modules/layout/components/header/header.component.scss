@@ -1,1 +1,85 @@
+.header-wrapper {
+  background: none;
+  width: 100%;
+}
 
+.header-container {
+  width: 100%;
+  padding: 0 159px;
+
+  .header__img {
+    margin-top: 44px;
+  }
+}
+
+.header-btn {
+  font-family: eUkraine,'sans-serif';
+  margin-top: 47px;
+  font-size: 16px;
+  line-height: 24px;
+
+  .btn__download {
+    width: 203px;
+    height: 56px;
+    padding: 14px 32px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 48px;
+    margin-right: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    &:hover {
+      background: #ce9427;
+      transition: 0.5s;
+    }
+  }
+
+  .btn__arrow {
+    margin-right: 9px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .header-wrapper {
+    min-width: 320px;
+  }
+
+  .header-container {
+    padding: 0 16px;
+
+    .header__img {
+      margin-top: 28px;
+      width: 108px;
+    }
+  }
+
+  .header-btn {
+    margin-top: 25px;
+    align-items: center;
+
+    .btn__download {
+      width: 160px;
+      height: 32px;
+      padding: 4px 24px;
+      border: 2px solid rgb(0, 0, 0);
+      border-radius: 27px;
+      margin-right: 2px;
+      font-size: 13px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+
+    .btn__arrow {
+      width: 12px;
+    }
+  }
+}
+@media screen and (max-width:1025px) {
+  .btn__download {
+    &:hover {
+      cursor: default;
+      background: transparent !important;
+    }
+  }
+}

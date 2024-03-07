@@ -1,0 +1,113 @@
+@import 'bootstrap/scss/mixins';
+@import 'src/assets/scss/theme-angular-starter1/bootstrap/variables';
+
+.footer-wrapper {
+  display: flex;
+  justify-content: center;
+  background: #000000;
+  min-height: 231px;
+  min-width: 1440px;
+
+  @include media-breakpoint-down(md) {
+    min-width: 320px;
+    padding-bottom: 26px;
+  }
+
+  .footer-container {
+    width: 1120px;
+    padding-top: 50px;
+
+    @include media-breakpoint-down(md) {
+      width: 900px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 286px;
+      padding-top: 65px;
+    }
+  }
+
+  .footer-card {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .contacts-nets {
+    .contacts-icons:not(:last-child) {
+      margin-right: 12px;
+
+      @include media-breakpoint-down(sm) {
+        margin-right: 14px;
+      }
+    }
+  }
+
+  .contacts-emails {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    color: #FFFFFF;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 45px;
+      align-items: start;
+    }
+  }
+
+  .email-margin {
+    margin-top: 8px;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 18px;
+    }
+  }
+
+  .emails__item {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      letter-spacing: 0;
+    }
+  }
+
+  .license {
+    color: #FFFFFF;
+    opacity: 50%;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 10px;
+      font-weight: 300;
+      line-height: 15px;
+      letter-spacing: 0;
+    }
+  }
+
+  .license-margin {
+    margin-top: 8px;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 26.42px;
+    }
+  }
+
+  .footer-logo {
+    @include media-breakpoint-down(sm) {
+      margin-top: 45px;
+    }
+  }
+}

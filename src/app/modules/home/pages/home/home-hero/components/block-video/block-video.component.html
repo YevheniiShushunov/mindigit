@@ -1,0 +1,32 @@
+<div class="section-two-video__container">
+  <div *ngIf="!showVideo" class="section-two__preview">
+    <div class="preview__tittle">
+      <h1>{{ previewTitle }}</h1>
+      <div class="preview__date">
+        <h3>{{ dateVideo }}</h3>
+      </div>
+    </div>
+    <button class="preview__btn" (click)="showBlockVideo()">
+      <img src="../../../../../../../../assets/img/icons/play-icon.svg" alt="play-video" />
+    </button>
+  </div>
+  <div *ngIf="showVideo" class="block-video-container">
+    <div>
+      <video
+        width="1440"
+        height="808"
+        autoplay="true"
+        (ended)="removePlayer()"
+        #blockPlayer
+        src="../../../../../../../../assets/video/digital-state.mp4"
+        (click)="startStopVideo()"
+      ></video>
+    </div>
+    <div class="block-video-btns">
+      <button (click)="startStopVideo()" class="video-play-btn">
+        <img *ngIf="!isPlaying" src="../../../../../../../../assets/img/icons/polygon.svg" alt="play" />
+        <img *ngIf="isPlaying && portableScreen" src="../../../../../../../../assets/img/icons/pause.svg" alt="pause" class="pause" />
+      </button>
+    </div>
+  </div>
+</div>

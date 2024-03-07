@@ -1,1 +1,38 @@
-<section>hero</section>
+<div>
+  <section class="first-block-wrapper">
+    <div class="first-block d-flex flex-column">
+      <app-header></app-header>
+      <div class="first-block-tittle d-flex flex-column align-items-center">
+        <h1>Реформування системи містобудування</h1>
+        <div class="first-block-tittle__button">
+          <button class="button__video d-flex align-items-center" (click)="scrollToVideo(targetVideo)">
+            <img src="assets/img/icons/polygon.svg" alt="play-icon" class="button__img" />
+            Відеотрансляція
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="second-block-wrapper">
+    <div class="second-block__card">
+      <div class="section-two-container">
+        <div *ngFor="let news of newsData; index as i" class="news-container d-flex">
+          <div class="news-container-item d-flex flex-column">
+            <div class="news-item__number">
+              {{ i | NewsNumber }}
+            </div>
+            <div class="news-item__title">
+              <h2>{{ news.title }}</h2>
+            </div>
+            <div class="news-item__text">{{ news.text }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div #targetVideo id="targetVideo">
+      <app-block-video></app-block-video>
+    </div>
+  </section>
+  <app-contacts></app-contacts>
+  <app-news></app-news>
+</div>

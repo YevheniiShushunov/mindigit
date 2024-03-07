@@ -1,0 +1,164 @@
+@import 'bootstrap/scss/mixins';
+@import 'src/assets/scss/theme-angular-starter1/bootstrap/variables';
+
+.block-three-wrapper {
+  min-height: 725px;
+  background: rgba(255, 250, 244, 1);
+
+  .connect-info__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 152px 238px 177px;
+    max-width: 1120px;
+    width: 100%;
+    padding-top: 85px;
+    padding-bottom: 74px;
+
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 254px 257px 257px;
+      padding: 0 16px 3px;
+    }
+  }
+
+  .connect-info__item {
+    display: flex;
+
+    .option__title {
+      max-width: 315px;
+
+      h2 {
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 43px;
+        color: rgba(0, 0, 0, 1);
+
+        @include media-breakpoint-down(sm) {
+          font-size: 24px;
+          line-height: 28.78px;
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
+        margin-top: 20px;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      max-width: 288px;
+    }
+  }
+
+  .connect-info__item:nth-child(2) {
+    @include media-breakpoint-down(sm) {
+      border-top: 2px solid rgba(0, 0, 0, 1);
+    }
+  }
+
+  .mob-email-padding {
+    @include media-breakpoint-down(sm) {
+      padding-top: 44px;
+    }
+  }
+
+  .connect-info__item:nth-child(3) {
+    border-bottom: 2px solid rgba(0, 0, 0, 1);
+    border-top: 2px solid rgba(0, 0, 0, 1);
+
+    @include media-breakpoint-down(sm) {
+      border-bottom: none;
+    }
+  }
+
+  .connect-info__option {
+    display: flex;
+    padding-left: 22px;
+
+    .option__icon {
+      margin-right: 30px;
+      margin-top: 6px;
+
+      img {
+        resize: none;
+        max-width: 45px;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      padding-left: 0;
+    }
+  }
+
+  .bot {
+    margin-top: 63px;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 32px;
+    }
+  }
+
+  .method-bot-padding {
+    padding-top: 64px;
+    padding-left: 21px;
+  }
+
+  .connect-info__method {
+    .method-title {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+
+  .method-read-us {
+    padding-top: 8px;
+    padding-left: 17px;
+  }
+
+  .connect-info__method:nth-child(4) {
+    border-bottom: 2px solid rgba(0, 0, 0, 1);
+    border-top: 2px solid rgba(0, 0, 0, 1);
+
+    @include media-breakpoint-down(sm) {
+      border-top: none;
+    }
+  }
+
+  .method-icon-block {
+    margin-top: 15px;
+
+    .icon-block__button:not(:last-child) {
+      margin-right: 22px;
+    }
+  }
+
+  .method-info {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 20px;
+      line-height: 23.98px;
+    }
+  }
+
+  .method-margin {
+    margin-top: 24px;
+  }
+
+  .info-phone-padding {
+    padding-top: 64px;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 36px;
+    }
+  }
+
+  .method-phone-padding {
+    padding-top: 70px;
+    padding-left: 20px;
+  }
+}

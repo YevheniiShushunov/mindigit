@@ -8,7 +8,7 @@ import { ServerModule } from '@angular/platform-server'
 import { UniversalInterceptor } from 'src/app/core/interceptors/universal.interceptor'
 
 @NgModule({
-  imports: [AppModule, ServerModule],
+  imports: [AppModule, ServerModule, ],
   bootstrap: [AppComponent],
   providers: [
     {
