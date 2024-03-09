@@ -173,6 +173,7 @@ export abstract class BaseFormComponent implements OnInit, OnDestroy {
   scrollToError(): void {
     setTimeout(() => {
       const invalidInput = this.elementRef.nativeElement.querySelector('.form-error > p')
+
       if (invalidInput) {
         invalidInput.scrollIntoView({
           block: 'center',

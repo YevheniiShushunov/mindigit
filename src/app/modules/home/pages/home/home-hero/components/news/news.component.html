@@ -3,20 +3,11 @@
     <div class="news-item">
       <div class="news-item__card">
         <div class="news-item__title">
-          <h1>Щотижневі новини</h1>
+          <h2>Щотижневі новини</h2>
         </div>
         <div class="news-item__text">Підпишіться, щоб отримувати листи</div>
       </div>
     </div>
-    <div class="news-form">
-      <div class="news-form-container">
-        <form [formGroup]="email" (ngSubmit)="sendSubscribersEmail()" class="form__card">
-          <input type="text" formControlName="email" class="email-input" placeholder="Ваш email" id="emailField" />
-          <div *ngIf="email.get('email')?.errors?.pattern" class="form-error error-massage-width">Введіть будь ласка імейл</div>
-          <button type="submit" class="form__submit-button">Підписатись</button>
-        </form>
-        <div class="news-form__text">Даю згоду на обробку та використання персональних даних</div>
-      </div>
-    </div>
+    <app-news-form (sentSuccess)="showMessage()"></app-news-form>
   </div>
 </section>

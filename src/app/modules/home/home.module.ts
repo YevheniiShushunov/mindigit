@@ -15,7 +15,9 @@ import { LayoutModule } from 'src/app/shared/modules/layout/layout.module'
 import { HomeRoutingModule } from 'src/app/modules/home/home-routing.module'
 import { HomeHeroComponent } from 'src/app/modules/home/pages/home/home-hero/home-hero.component'
 import { HomeProjectsComponent } from 'src/app/modules/home/pages/home/home-projects/home-projects.component'
-import { HomeComponent } from 'src/app/modules/home/pages/home/home.component'
+import { HomeComponent } from 'src/app/modules/home/pages/home/home.component';
+import { NewsFormComponent } from './pages/home/home-hero/components/news/components/news-form/news-form.component';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { HomeComponent } from 'src/app/modules/home/pages/home/home.component'
     ContactsComponent,
     NewsComponent,
     ModalMessageComponent,
+    NewsFormComponent,
   ],
   imports: [CommonModule, HomeRoutingModule, CoreModule, LayoutModule, ReactiveFormsModule],
   exports: [NewsNumberPipe],

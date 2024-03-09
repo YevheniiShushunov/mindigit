@@ -1,0 +1,12 @@
+<div class="news-form">
+  <div class="news-form-container">
+    <form [formGroup]="formGroup" (ngSubmit)="submit()" class="form__card">
+      <input type="text" formControlName="email" class="email-input" placeholder="Ваш email" id="emailField" />
+      <div #newsError class="form-error news-form__error error-massage-width">
+        <p *ngIf="formGroup.get('email')?.errors?.email">Введіть будь ласка email</p>
+      </div>
+      <button type="submit" class="form__submit-button">Підписатись</button>
+    </form>
+    <div class="news-form__text">Даю згоду на обробку та використання персональних даних</div>
+  </div>
+</div>

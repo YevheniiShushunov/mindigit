@@ -1,0 +1,130 @@
+@import 'bootstrap/scss/mixins';
+@import 'src/assets/scss/theme-angular-starter1/bootstrap/variables';
+
+.news-form-container {
+  margin-top: 121px;
+  margin-left: 113px;
+
+  @include media-breakpoint-down(md) {
+    margin-left: 60px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 79px;
+    margin-left: 0;
+  }
+
+  .form__card {
+    display: flex;
+    flex-direction: column;
+
+    input::placeholder {
+      transform: translateY(-20%);
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0;
+    }
+  }
+
+  .form__submit-button {
+    margin-top: 27px;
+    width: 294px;
+    height: 64px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: center;
+    background: #000000;
+    color: #FFFFFF;
+    border-radius: 40px;
+
+    &:hover {
+      background: #545416;
+      transition: 0.5s;
+
+      @include media-breakpoint-down(xl) {
+        background: #000000;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 34px;
+      width: 184px;
+      height: 48px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0;
+
+      &:hover {
+        background: #000000;
+      }
+    }
+  }
+
+  .form__label {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0;
+  }
+
+  .email-input {
+    max-width: 293px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    outline: none;
+    background: rgb(255, 205, 78);
+
+    @include media-breakpoint-down(sm) {
+      max-width: 288px;
+      height: 26px;
+    }
+  }
+}
+
+.news-form__text {
+  margin-top: 21px;
+  max-width: 258px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 13px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0;
+  }
+}
+
+.form__card {
+  input:-internal-autofill-selected,
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    max-width: 293px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    outline: none;
+    -webkit-box-shadow: 0 0 0 30px rgb(255, 205, 78) inset !important;
+
+    @include media-breakpoint-down(sm) {
+      max-width: 288px;
+      height: 26px;
+    }
+  }
+}
+
+.news-form__error {
+  color: red;
+  background: rgb(255, 205, 78);
+}
+
+.error-massage-width {
+  max-width: 294px;
+}
