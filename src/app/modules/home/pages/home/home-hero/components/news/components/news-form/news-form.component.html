@@ -4,9 +4,13 @@
       <input type="text" formControlName="email" class="email-input" placeholder="Ваш email" id="emailField" />
       <div #newsError class="form-error news-form__error error-massage-width">
         <p *ngIf="formGroup.get('email')?.errors?.email">Введіть будь ласка email</p>
+        <p *ngIf="formGroup.get('email')?.errors?.emailAlreadyExisted">Ви вже підписались на новини</p>
       </div>
-      <button type="submit" class="form__submit-button">Підписатись</button>
+      <button type="submit" class="form__submit-button" [disabled]="isPending">Підписатись</button>
     </form>
     <div class="news-form__text">Даю згоду на обробку та використання персональних даних</div>
   </div>
+</div>
+<div *ngIf="isPending" class="spinner">
+  <img src="assets/img/icons/spinner.svg" alt="spinner" class="spinner-icon" />
 </div>

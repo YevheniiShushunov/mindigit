@@ -1,11 +1,13 @@
 import { Observable } from 'rxjs'
 
-import { BaseFormComponent } from '../../../../../../../../../core/abstracts/base-form.component';
+import { BaseFormComponent } from '../../../../../../../../../core/abstracts/base-form.component'
+
+import { EmailNameValidator } from './classes/email-name-validator'
+import { EmailFormService } from './email-form.service'
 
 import { HttpClient } from '@angular/common/http'
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
-
 
 @Component({
   selector: 'app-news-form',
@@ -18,7 +20,7 @@ export class NewsFormComponent extends BaseFormComponent implements AfterViewIni
   elementRef!: ElementRef
   formGroup = this.emailForm()
 
-  constructor(public formBuilder: FormBuilder, private http: HttpClient) {
+  constructor(public formBuilder: FormBuilder, private http: HttpClient, private emailService: EmailFormService) {
     super()
   }
 
@@ -28,9 +30,15 @@ export class NewsFormComponent extends BaseFormComponent implements AfterViewIni
     }
   }
 
-  emailForm(email?: string): FormGroup {
+  emailForm(): FormGroup {
     return this.formBuilder.group({
-      email: ['' || email, [Validators.email, Validators.required]],
+      email: [
+        null,
+        {
+          validators: [Validators.email, Validators.required],
+          asyncValidators: EmailNameValidator.createValidator(this.emailService),
+        },
+      ],
     })
   }
 
