@@ -16,7 +16,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 })
 export class NewsFormComponent extends BaseFormComponent implements AfterViewInit {
   @ViewChild('newsError') newsError!: ElementRef
-  private apiUrl = 'https://rm-united24-rebuild-api-public.demo.ukrohost.com/appeal/check-unique-email'
+  // private apiUrl = 'https://rm-united24-rebuild-api-public.demo.ukrohost.com/appeal/check-unique-email'
+  private apiUrl = 'http://localhost:3000/users'
   elementRef!: ElementRef
   formGroup = this.emailForm()
 
@@ -40,6 +41,10 @@ export class NewsFormComponent extends BaseFormComponent implements AfterViewIni
         },
       ],
     })
+  }
+
+  submitRequest() {
+
   }
 
   prepareRequest(): Observable<unknown> {

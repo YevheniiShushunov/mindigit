@@ -3,13 +3,12 @@
 
 .section-two-video__container {
   width: 100%;
+  position: relative;
 
   .section-two__preview {
-    //padding-top: 591.44px / 1127.34px * 100%;
-    min-height: 808px;
-    height: 100%;
-    display: flex;
-    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-top: 56.25%;
     background-image: url("/assets/img/dia-img.png");
     background-size: cover;
 
@@ -21,6 +20,10 @@
 
   .preview__btn {
     justify-self: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     @include media-breakpoint-down(xxl) {
       position: absolute;
@@ -90,24 +93,18 @@
   }
 
   .block-video-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #000000;
-    background-size: cover;
+    height: 0;
+    overflow: hidden;
+    padding-top: 591.44px / 1127.34px * 100%;
     position: relative;
+    background: #000000;
 
     video {
-      @include media-breakpoint-down(xxl) {
-        width: 100%;
-        aspect-ratio: inherit;
-      }
-
-      @include media-breakpoint-down(sm) {
-        width: 100%;
-        aspect-ratio: unset;
-        max-height: 181px;
-      }
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
 
     .block-video-btns {;

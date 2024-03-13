@@ -11,6 +11,7 @@ export class EmailNameValidator {
       return emailService.checkEmailExist(control.value).pipe(
         map((result: boolean) => {
           if (result) {
+            console.log(result)
             return { emailAlreadyExisted: true }
           } else {
             return null
