@@ -15,6 +15,6 @@ export class HomeHeroService {
   //   return firstValueFrom(this.apiUrl)
   // }
   sendUserEmail(email: string): string[] {
-    return (this.apiUrl)
+    return this.apiUrl
   }
 }
